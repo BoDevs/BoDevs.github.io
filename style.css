@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    z-index: 10;
+}
+
+.navbar.hidden {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+    transition: all 0.2s; 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: rgb(180, 180, 180);
+    transition: all 0.2s;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+#home h1 {
+    margin-top: -100px;
+    position: relative;
+    animation-name: heading;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards; 
+    animation-timing-function: ease-in-out;   
+}
+
+@keyframes heading {
+    0% {top: -300px; opacity: 0;}
+    100% {top: 0px; opacity: 1;}
+}
+
+#home p {
+    opacity: 0;
+    position: relative;
+    animation-name: content;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes content {
+    0% {left: -1000px; opacity: 0;}
+    100% {left: 0px; opacity: 1;}
+}
+
+.btn{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border: #fff 1px solid;
+    border-radius: 3px;
+    margin-top: 25px;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3000ms;
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+@keyframes btn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    /* scroll-snap-align: center; */
+}
+
+section h1 {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+section p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 20px;
+    /* text-shadow: 2px 2px 12px rgb(0, 0, 0); */
+}
+
+section#home {
+    background:  linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%), url(img/hero2.jpg) no-repeat center center/cover;
+    /* background-attachment: fixed; */
+} 
+
+section#about {
+    background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='69' height='34.5' viewBox='0 0 69 34.5'%3E%3Cdefs%3E%3Crect stroke='%23000000' stroke-width='0.1' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='2' height='2' patternUnits='userSpaceOnUse'%3E%3Cg stroke='%23000000' stroke-width='0.1'%3E%3Crect fill='%23050505' width='1' height='1'/%3E%3Crect fill='%23000000' width='1' height='1' x='1' y='1'/%3E%3Crect fill='%230a0a0a' width='1' height='1' y='1'/%3E%3Crect fill='%230f0f0f' width='1' height='1' x='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='b' width='5' height='11' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23141414'%3E%3Cuse xlink:href='%23s' x='2' y='0'/%3E%3Cuse xlink:href='%23s' x='4' y='1'/%3E%3Cuse xlink:href='%23s' x='1' y='2'/%3E%3Cuse xlink:href='%23s' x='2' y='4'/%3E%3Cuse xlink:href='%23s' x='4' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='8'/%3E%3Cuse xlink:href='%23s' x='3' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='7' height='7' patternUnits='userSpaceOnUse'%3E%3Cg fill='%231a1a1a'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='3' y='4'/%3E%3Cuse xlink:href='%23s' x='5' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='11' height='5' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23000000'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='6' y='3'/%3E%3Cuse xlink:href='%23s' x='8' y='2'/%3E%3Cuse xlink:href='%23s' x='3' y='0'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3Cg fill='%231f1f1f'%3E%3Cuse xlink:href='%23s' x='8' y='3'/%3E%3Cuse xlink:href='%23s' x='4' y='2'/%3E%3Cuse xlink:href='%23s' x='5' y='4'/%3E%3Cuse xlink:href='%23s' x='10' y='0'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='23' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23170c1c'%3E%3Cuse xlink:href='%23s' x='2' y='5'/%3E%3Cuse xlink:href='%23s' x='23' y='13'/%3E%3Cuse xlink:href='%23s' x='4' y='18'/%3E%3Cuse xlink:href='%23s' x='35' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='61' height='31' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23170c1c'%3E%3Cuse xlink:href='%23s' x='16' y='0'/%3E%3Cuse xlink:href='%23s' x='13' y='22'/%3E%3Cuse xlink:href='%23s' x='44' y='15'/%3E%3Cuse xlink:href='%23s' x='12' y='11'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='69' height='34.5'/%3E%3Crect fill='url(%23b)' width='69' height='34.5'/%3E%3Crect fill='url(%23c)' width='69' height='34.5'/%3E%3Crect fill='url(%23d)' width='69' height='34.5'/%3E%3Crect fill='url(%23e)' width='69' height='34.5'/%3E%3Crect fill='url(%23f)' width='69' height='34.5'/%3E%3C/svg%3E");
+/* background-attachment: fixed; */
+background-size: cover;
+    overflow: hidden;
+}
+
+/* .face {
+    position: absolute;
+    height: 400px;
+    z-index: 0;
+    opacity: 0.2;
+    animation-name: myanimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+} */
+
+@keyframes myanimation {
+    0% {left: -700px; top: 30%;}
+    100% {left: 1500px; top: 30%; transform: rotate(900deg);}
+}
+
+section#skills {
+    background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+section#contact {
+    background-color: #111111;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2327032b' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%235933aa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2339063e' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23552ca3' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%234e0752' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2352249c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23630767' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%234e1b96' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2379057c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%234b118f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23910091' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23470488' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:540px) {
+    .navbar ul li {
+        padding: 1rem 0rem;
+    }
+
+    section h1 {
+        font-size: 3rem;
+        transition: all 0.5s;
+    }
+    
+    section p {
+        font-size: 1.2rem;
+        transition: all 0.5s;
+    }
+
+}
