@@ -36,6 +36,17 @@ nav > a{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 25px;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 118px;
+    height: 1px;
+    background-color: rgb(233, 233, 233);
+    left: 1px;
+    top: 35px;
 }
 
 .nav-links{
@@ -157,14 +168,15 @@ nav > a{
     padding: 60px 0;
 }
 
-.sections p {
-    margin: 0 auto;
-    padding: 10px 30px;
-}
-
 .sections h1 {
     margin: 0 auto;
     padding: 20px 30px;
+}
+
+.sections p {
+    margin: 0 auto;
+    padding: 10px 30px;
+    width: 100%;
 }
 
 section h1 {
