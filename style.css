@@ -149,10 +149,9 @@ nav > a{
 }
 
 .sections {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; */
     width: 100%;
     min-height: 100vh;
     padding: 60px 0;
